@@ -10,8 +10,8 @@ namespace homework3
     {
         static void Main(string[] args)
         {
-            int[] arr = new int[n];                                 // Инициализируем массив
             int n = 5;                                              // Инициализируем длину массива
+            int[] arr = new int[n];                                 // Инициализируем массив
             int k = 0;                                              // Инициализируем счетчик для цикла "while"    
             while (k < n)                                           
                     {
