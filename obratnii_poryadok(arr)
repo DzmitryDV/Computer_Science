@@ -1,0 +1,40 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace homework3
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int n = 5;                                              // Инициализируем длину массива
+            int[] arr = new int[n];                                 // Инициализируем массив
+            int k = 0;                                              // Инициализируем счетчик для цикла "while"    
+            while (k < n)
+                {
+                    arr[k] = Convert.ToInt32(Console.ReadLine());   // Заполняем наш массив элементами с консоли
+                    k++;
+                }
+
+            Console.Write("\nВаш массив: ");
+
+            for (int i = 0; i < n; i++)
+                {
+                    Console.Write(arr[i]);                          // Выводим наш массив на консоль (для самопроверки)
+                    Console.Write(" ");
+                }
+
+            Console.Write("\nВывод вашего массива в обратном порядке: ");
+
+            for (int x = n - 1; x >= 0; x--)                        // x = n-1, т.к. длина массива "n" равна 5, а индекс 5-го элемента равен 4. Пока х будет >= 0(нулевой индекс нашего массива), будем выводить элементы в обратном порядке. 
+                {
+                    Console.Write(arr[x]);                          // Выводим массив на консоль в обратном порядке
+                    Console.Write(" ");
+                }
+            Console.ReadKey();
+        }
+    }
+}
