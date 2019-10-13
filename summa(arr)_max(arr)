@@ -1,0 +1,42 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace homework3
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int n = 5;                                              // Инициализируем длину массива
+            int[] arr = new int[n];                                 // Инициализируем массив
+            int k = 0;                                              // Инициализируем счетчик для цикла "while"    
+                while (k < n)                                           
+                    {
+                        arr[k] = Convert.ToInt32(Console.ReadLine()); // Заполняем наш массив элементами с консоли
+                        k++;
+                    }
+
+            int summa = 0;                                          // Инициализируем переменную для суммы элементов нашего массива
+                for (int z = 0; z < n; z++)                         // Перебираем наш массив по элементам и сумируем их
+                    {
+                        summa = summa + arr[z];                     // Суммируем все элементы массива
+                    }
+            Console.WriteLine($"\nСумма всех элементов массива равна: {summa}"); // Выводим сумму элементов массива на консоль
+
+            
+            int maxi = arr[0];                                      // Инициализируем переменную для максимального элемента массива и присваиваем ей значение 0-го элемента массива
+                for (int w = 0; w < n; w++)                         // Перебор массива    
+                    {
+                        if (arr[w] > maxi)                          // Условие сравнения каждого значения массива со значением 0-го элемента массива
+                            {
+                                maxi = arr[w];                      // Присваивание нашей переменной максимального значения
+                            }
+                    }
+            Console.Write($"\nМаксимальный элемент масива равен: {maxi}");
+            Console.ReadKey();
+        }
+    }
+}
