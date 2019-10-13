@@ -1,0 +1,48 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace homework3
+{
+    class Program
+    {
+        static int Min(int[] arr)                                   // Создаем метод для нахождения минимального элемента массива
+        {
+            int min = arr[0];                                       // Инициализируем переменную для минимального элемента массива и присваиваем ей значение 0-го элемента массива
+            for (int i = 0; i < arr.Length; i++)                    // Перебор массива 
+            {
+                if (arr[i] < min)                                   // Условие сравнения каждого значения массива со значением 0-го элемента массива
+                {
+                    min = arr[i];                                   // Присваивание нашей переменной минимального значения
+                }
+
+            }
+            return min;                                             // Возвращаем минимальное значение массива
+        }
+        static void Main(string[] args)
+        {
+            int n = 5;                                              // Инициализируем длину массива
+            int[] arr = new int[n];                                 // Инициализируем массив
+            int k = 0;                                              // Инициализируем счетчик для цикла "while"    
+            while (k < n)
+            {
+                arr[k] = Convert.ToInt32(Console.ReadLine());       // Заполняем наш массив элементами с консоли
+                k++;
+            }
+
+            Console.Write("\nВаш массив: ");
+            for (int i = 0; i < n; i++)
+            {
+                Console.Write(arr[i]);                              // Выводим наш массив на консоль (для самопроверки)
+                Console.Write(" ");
+            }
+
+            int mini = Min(arr);                                    // Инициализируем переменную для минимального значения массива, применяем к массиву метод "Min" и присваиваем нашей переменной минимальное значение массива  
+
+            Console.Write($"\nМинимальный элемент масива равен: {mini}"); 
+            Console.ReadKey();
+        }
+    }
+}
