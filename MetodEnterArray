@@ -8,14 +8,13 @@ namespace homework3
 {
     class Program
     {
-        static int EnterArr(int[] arr)                                   // Создаем метод ввода массива
+        static void EnterArr(int[] arr)                                  // Создаем метод ввода массива
         {
-            int array = 0;                                               // Инициализируем переменную для массива
             for (int i = 0; i < arr.Length; i++)                         // Условие заполнения массива 
                 {
                     arr[i] = Convert.ToInt32(Console.ReadLine());        // Заплняем наш массив с консоли   
                 }
-            return array;                                                // Возвращаем наш массив
+            return;                                                      // Возвращаем наш массив
         }
 
 
@@ -25,7 +24,7 @@ namespace homework3
             Console.Write("Введите длину массива: ");
             int len = Convert.ToInt32(Console.ReadLine());              // Инициализируем длину массива и вводим её с консоли
             int[] arr = new int[len];                                   // Инициализируем массив
-            EnterArr(arr);
+            EnterArr(arr);                                              // Заполняем элементами наш массив с помощью метода "EnterArr"     
 
             Console.Write("\nВаш массив: ");
             for (int i = 0; i < len; i++)
